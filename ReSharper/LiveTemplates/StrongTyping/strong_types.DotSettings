@@ -1,0 +1,357 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Shortcut/@EntryValue">strongval</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Description/@EntryValue">Strong type based on a value-type</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Text/@EntryValue">$VISIBILITY$ struct $TYPENAME$ : System.IEquatable&lt;$TYPENAME$&gt;&#xD;
+{&#xD;
+    private readonly $WRAPPEDTYPE$ _value;&#xD;
+&#xD;
+    public $TYPENAME$($WRAPPEDTYPE$ value)&#xD;
+    {&#xD;
+        _value = value;&#xD;
+    }&#xD;
+&#xD;
+    public bool Equals($TYPENAME$ other)&#xD;
+    {&#xD;
+        return _value == other._value;&#xD;
+    }&#xD;
+&#xD;
+    public override bool Equals(object obj)&#xD;
+    {&#xD;
+        if (ReferenceEquals(null, obj))&#xD;
+        {&#xD;
+            return false;&#xD;
+        }&#xD;
+&#xD;
+        return obj is $TYPENAME$ &amp;&amp; Equals(($TYPENAME$)obj);&#xD;
+    }&#xD;
+&#xD;
+    public override int GetHashCode()&#xD;
+    {&#xD;
+        return _value.GetHashCode();&#xD;
+    }&#xD;
+&#xD;
+    public override string ToString()&#xD;
+    {&#xD;
+        return _value.ToString();&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $WRAPPEDTYPE$($TYPENAME$ value)&#xD;
+    {&#xD;
+        return value._value;&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $TYPENAME$($WRAPPEDTYPE$ value)&#xD;
+    {&#xD;
+        return new $TYPENAME$(value);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator ==($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.Equals(rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator !=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs == rhs);&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Categories/=Strong_0020typing/@EntryIndexedValue">Strong typing</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=WRAPPEDTYPE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=WRAPPEDTYPE/Expression/@EntryValue">constant("int")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=WRAPPEDTYPE/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=VISIBILITY/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=VISIBILITY/Expression/@EntryValue">list("internal,public,protected,private")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=VISIBILITY/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=TYPENAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=TYPENAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6E8011647738604291834B868558DB2F/Field/=TYPENAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Shortcut/@EntryValue">cmpstrongstr</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Description/@EntryValue">Strong type based on a string implementing IComparable&lt;&gt; etc.</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Text/@EntryValue">$VISIBILITY$ struct $TYPENAME$ : System.IEquatable&lt;$TYPENAME$&gt;, System.IComparable&lt;$TYPENAME$&gt;, System.IComparable&#xD;
+{&#xD;
+    private readonly string _value;&#xD;
+&#xD;
+    public $TYPENAME$(string value)&#xD;
+    {&#xD;
+        _value = value;&#xD;
+    }&#xD;
+&#xD;
+    public bool Equals($TYPENAME$ other)&#xD;
+    {&#xD;
+        return string.Equals(_value, other._value);&#xD;
+    }&#xD;
+&#xD;
+    public override bool Equals(object obj)&#xD;
+    {&#xD;
+        if (ReferenceEquals(null, obj))&#xD;
+        {&#xD;
+            return false;&#xD;
+        }&#xD;
+&#xD;
+        return obj is $TYPENAME$ &amp;&amp; Equals(($TYPENAME$)obj);&#xD;
+    }&#xD;
+&#xD;
+    public override int GetHashCode()&#xD;
+    {&#xD;
+        return _value != null ? _value.GetHashCode() : 0;&#xD;
+    }&#xD;
+&#xD;
+    public override string ToString()&#xD;
+    {&#xD;
+        return _value ?? "";&#xD;
+    }&#xD;
+&#xD;
+    public int CompareTo($TYPENAME$ other)&#xD;
+    {&#xD;
+        return string.Compare(_value, other._value, System.StringComparison.Ordinal);&#xD;
+    }&#xD;
+&#xD;
+    int IComparable.CompareTo(object obj)&#xD;
+    {&#xD;
+        if (obj is $TYPENAME$)&#xD;
+        {&#xD;
+            return CompareTo(($TYPENAME$)obj);&#xD;
+        }&#xD;
+&#xD;
+        throw new ArgumentException("Incorrect type.", nameof(obj));&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator string($TYPENAME$ value)&#xD;
+    {&#xD;
+        return value._value;&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $TYPENAME$(string value)&#xD;
+    {&#xD;
+        return new $TYPENAME$(value);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator ==($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.Equals(rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator !=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs == rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &lt;($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.CompareTo(rhs) &lt; 0;&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &gt;($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.CompareTo(rhs) &gt; 0;&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &lt;=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs &gt; rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &gt;=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs &lt; rhs);&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Categories/=Strong_0020typing/@EntryIndexedValue">Strong typing</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=VISIBILITY/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=VISIBILITY/Expression/@EntryValue">list("internal,public,protected,private")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=VISIBILITY/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=TYPENAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=TYPENAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8234096B9E1EF149B1751BA5433420D6/Field/=TYPENAME/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Shortcut/@EntryValue">cmpstrongval</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Description/@EntryValue">Strong type based on a value-type implementing IComparable&lt;&gt; etc.</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Text/@EntryValue">$VISIBILITY$ struct $TYPENAME$ : System.IEquatable&lt;$TYPENAME$&gt;, System.IComparable&lt;$TYPENAME$&gt;, System.IComparable&#xD;
+{&#xD;
+    private readonly $WRAPPEDTYPE$ _value;&#xD;
+&#xD;
+    public $TYPENAME$($WRAPPEDTYPE$ value)&#xD;
+    {&#xD;
+        _value = value;&#xD;
+    }&#xD;
+&#xD;
+    public bool Equals($TYPENAME$ other)&#xD;
+    {&#xD;
+        return _value == other._value;&#xD;
+    }&#xD;
+&#xD;
+    public override bool Equals(object obj)&#xD;
+    {&#xD;
+        if (ReferenceEquals(null, obj))&#xD;
+        {&#xD;
+            return false;&#xD;
+        }&#xD;
+&#xD;
+        return obj is $TYPENAME$ &amp;&amp; Equals(($TYPENAME$)obj);&#xD;
+    }&#xD;
+&#xD;
+    public override int GetHashCode()&#xD;
+    {&#xD;
+        return _value.GetHashCode();&#xD;
+    }&#xD;
+&#xD;
+    public override string ToString()&#xD;
+    {&#xD;
+        return _value.ToString();&#xD;
+    }&#xD;
+&#xD;
+    public int CompareTo($TYPENAME$ other)&#xD;
+    {&#xD;
+        return System.Collections.Generic.Comparer&lt;$WRAPPEDTYPE$&gt;.Default.Compare(_value, other._value);&#xD;
+    }&#xD;
+&#xD;
+    int System.IComparable.CompareTo(object obj)&#xD;
+    {&#xD;
+        if (obj is $TYPENAME$)&#xD;
+        {&#xD;
+            return CompareTo(($TYPENAME$)obj);&#xD;
+        }&#xD;
+&#xD;
+        throw new System.ArgumentException("Incorrect type.", nameof(obj));&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $WRAPPEDTYPE$($TYPENAME$ value)&#xD;
+    {&#xD;
+        return value._value;&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $TYPENAME$($WRAPPEDTYPE$ value)&#xD;
+    {&#xD;
+        return new $TYPENAME$(value);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator ==($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.Equals(rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator !=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs == rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &lt;($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.CompareTo(rhs) &lt; 0;&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &gt;($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.CompareTo(rhs) &gt; 0;&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &lt;=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs &gt; rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator &gt;=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs &lt; rhs);&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Categories/=Strong_0020typing/@EntryIndexedValue">Strong typing</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=WRAPPEDTYPE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=WRAPPEDTYPE/Expression/@EntryValue">constant("int")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=WRAPPEDTYPE/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=VISIBILITY/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=VISIBILITY/Expression/@EntryValue">list("internal,public,protected,private")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=VISIBILITY/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=TYPENAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=TYPENAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA1FFEC5C02A0C4BBB4FBA2F0E1A2611/Field/=TYPENAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Shortcut/@EntryValue">strongstr</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Description/@EntryValue">Strong type based on a string</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Text/@EntryValue">$VISIBILITY$ struct $TYPENAME$ : System.IEquatable&lt;$TYPENAME$&gt;&#xD;
+{&#xD;
+    private readonly string _value;&#xD;
+&#xD;
+    public $TYPENAME$(string value)&#xD;
+    {&#xD;
+        _value = value;&#xD;
+    }&#xD;
+&#xD;
+    public bool Equals($TYPENAME$ other)&#xD;
+    {&#xD;
+        return string.Equals(_value, other._value);&#xD;
+    }&#xD;
+&#xD;
+    public override bool Equals(object obj)&#xD;
+    {&#xD;
+        if (ReferenceEquals(null, obj))&#xD;
+        {&#xD;
+            return false;&#xD;
+        }&#xD;
+&#xD;
+        return obj is $TYPENAME$ &amp;&amp; Equals(($TYPENAME$)obj);&#xD;
+    }&#xD;
+&#xD;
+    public override int GetHashCode()&#xD;
+    {&#xD;
+        return _value != null ? _value.GetHashCode() : 0;&#xD;
+    }&#xD;
+&#xD;
+    public override string ToString()&#xD;
+    {&#xD;
+        return _value ?? "";&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator string($TYPENAME$ value)&#xD;
+    {&#xD;
+        return value._value;&#xD;
+    }&#xD;
+&#xD;
+    public static explicit operator $TYPENAME$(string value)&#xD;
+    {&#xD;
+        return new $TYPENAME$(value);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator ==($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return lhs.Equals(rhs);&#xD;
+    }&#xD;
+&#xD;
+    public static bool operator !=($TYPENAME$ lhs, $TYPENAME$ rhs)&#xD;
+    {&#xD;
+        return !(lhs == rhs);&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Categories/=Strong_0020typing/@EntryIndexedValue">Strong typing</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=VISIBILITY/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=VISIBILITY/Expression/@EntryValue">list("internal,public,protected,private")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=VISIBILITY/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=TYPENAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=TYPENAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ACFBF2C9C0CC6C428C5D7FC98E50A6FB/Field/=TYPENAME/Order/@EntryValue">1</s:Int64></wpf:ResourceDictionary>

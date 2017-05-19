@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Strong type: value-type based</Title>
+      <Description>Strong type based on a value-type</Description>
+      <Shortcut>strongval</Shortcut>
+      <Author>Jos Hickson</Author>
+      <Author>Winton</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>typename</ID>
+          <ToolTip>Name of the strong type</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>MyStrongType</Default>
+        </Literal>
+        <Literal>
+          <ID>typevisibility</ID>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>valuetype</ID>
+          <ToolTip>The underlying value type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+$typevisibility$ struct $typename$ : System.IEquatable<$typename$>
+{
+    private readonly $valuetype$ _value;
+
+    public $typename$($valuetype$ value)
+    {
+        _value = value;
+    }
+
+    public bool Equals($typename$ other)
+    {
+        return _value == other._value;
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (ReferenceEquals(null, obj))
+        {
+            return false;
+        }
+
+        return obj is $typename$ && Equals(($typename$)obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return _value.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        return _value.ToString();
+    }
+
+    public static explicit operator $valuetype$($typename$ value)
+    {
+        return value._value;
+    }
+
+    public static explicit operator $typename$($valuetype$ value)
+    {
+        return new $typename$(value);
+    }
+
+    public static bool operator ==($typename$ lhs, $typename$ rhs)
+    {
+        return lhs.Equals(rhs);
+    }
+
+    public static bool operator !=($typename$ lhs, $typename$ rhs)
+    {
+        return !(lhs == rhs);
+    }
+}
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
