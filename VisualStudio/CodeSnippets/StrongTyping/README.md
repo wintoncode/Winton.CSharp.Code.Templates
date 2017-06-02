@@ -12,7 +12,7 @@ The "comparable" types differ from the non-comparable types in that they impleme
 
 ## Installation
 
-Then, in Visual Studio go to __Tools -> Code Snippets Manager__, select __CSharp__ from the list of languages
+In Visual Studio go to __Tools -> Code Snippets Manager__, select __CSharp__ from the list of languages
 in the drop-down at the top and select a location from the pane below.
 Now click __Import...__ and navigate to the *.snippet files and click __Open__.
 You should now be able to access the code snippets in a C# file via the short-cuts named above.
