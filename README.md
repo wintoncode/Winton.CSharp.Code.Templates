@@ -10,7 +10,7 @@ below for the different template types available.
 ## Strong types
 
 File templates and code snippets for the strong typing pattern described on
-[Winton's Tech Blog](https://tech.winton.com/blog/2017/06/strong-typing)
+[Winton's Tech Blog](https://tech.winton.com/blog/2017/06/strong-typing-a-pattern-for-more-robust-code)
 can be accessed for the following tools:
 
 * ReSharper instructions:
