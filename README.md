@@ -14,7 +14,7 @@ File templates and code snippets for the strong typing pattern described on
 can be accessed for the following tools:
 
 * ReSharper instructions:
-  * [Live templates](ReSharper/LiveTemplates/StrongTyping/ReadMe.md) 
-  * [File templates](ReSharper/FileTemplates/StrongTyping/ReadMe.md) 
-* [Visual Studio Code instructions](VisualStudioCode/CodeSnippets/StrongTyping/ReadMe.md) 
-* [Visual Studio instructions](VisualStudio/CodeSnippets/StrongTyping/ReadMe.md) 
+  * [Live templates](ReSharper/LiveTemplates/StrongTyping/README.md) 
+  * [File templates](ReSharper/FileTemplates/StrongTyping/README.md) 
+* [Visual Studio Code instructions](VisualStudioCode/CodeSnippets/StrongTyping/README.md) 
+* [Visual Studio instructions](VisualStudio/CodeSnippets/StrongTyping/README.md) 
